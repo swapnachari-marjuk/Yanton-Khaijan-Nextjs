@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import AddCartBtn from "../btns/AddCartBtn";
 // import { useNavigate } from "react-router-dom";
 
 const FoodCard = ({ food }) => {
@@ -30,12 +31,7 @@ const FoodCard = ({ food }) => {
 
         {/* Buttons */}
         <div className="flex gap-3 pt-3">
-          <button
-            // onClick={() => onAddToCart(food)}
-            className="flex-1 bg-primary py-2 rounded-lg hover:bg-primary/90 transition"
-          >
-            Add to Cart
-          </button>
+          <AddCartBtn food={food} />
 
           <Link
             href={`/foods/${id}`}
