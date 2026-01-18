@@ -10,6 +10,7 @@ const AddCartBtn = ({ food }) => {
     setInCart(true);
     addToCart(food);
   };
+  
   return (
     <button
       onClick={onAddToCart}

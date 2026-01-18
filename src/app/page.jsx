@@ -1,13 +1,15 @@
 export default function Home() {
   return (
-    <div className="flex items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-           Let&apos;s start learning Next.js
-          </h1>
-        </div>
-      </main>
+    <div className="flex flex-col gap-5 min-h-screen justify-center text-center items-stretch">
+      <div className="relative ">
+        <h2 className="text-4xl font-bold">Next JS Fetching & Rendering</h2>
+        <h2 className="text-8xl absolute inset-0 -top-20  opacity-10 font-medium">
+          Fetching Rendering & Styling
+        </h2>
+      </div>
+      <div className="">
+        <button className="btn">Lets Explore</button>
+      </div>
     </div>
   );
 }

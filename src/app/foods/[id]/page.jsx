@@ -12,8 +12,9 @@ const FoodDetails = async ({ params }) => {
   };
 
   const food = await getSingleFood(id);
+  
   if (!food) {
-    return console.log("no data found.");
+    return <p className="text-center py-10">No food details found!</p>;
   }
 
   console.log(food);
