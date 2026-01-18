@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import AddCartBtn from "../btns/AddCartBtn";
+import Image from 'next/image'
 // import { useNavigate } from "react-router-dom";
 
 const FoodCard = ({ food }) => {
@@ -11,7 +12,9 @@ const FoodCard = ({ food }) => {
   return (
     <div className="rounded-xl border shadow-sm hover:shadow-md transition overflow-hidden">
       {/* Image */}
-      <img src={foodImg} alt={title} className="w-full h-48 object-cover" />
+      {/* <img src={foodImg} alt={title} className="w-full h-48 object-cover" /> */}
+
+      <Image src={foodImg} width={365}  height={192} alt={title} />
 
       {/* Content */}
       <div className="p-4 space-y-2">

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const ReviewsCard = ({ review }) => {
   console.log(review);
@@ -17,11 +18,12 @@ const ReviewsCard = ({ review }) => {
     <div className="max-w-md rounded-xl border bg-white p-4 shadow-sm">
       {/* User info */}
       <div className="flex items-center gap-3">
-        <img
+        {/* <img
           src={photo}
           alt={user}
           className="h-12 w-12 rounded-full object-cover"
-        />
+        /> */}
+        <Image className="rounded-full object-cover" src={photo} alt={user} width={48} height={48}/>
         <div>
           <h3 className="font-semibold">{user}</h3>
           <p className="text-sm text-gray-500">{email}</p>

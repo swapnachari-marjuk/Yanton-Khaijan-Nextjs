@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 const FoodDetails = async ({ params }) => {
   const { id } = await params;
@@ -12,7 +13,7 @@ const FoodDetails = async ({ params }) => {
   };
 
   const food = await getSingleFood(id);
-  
+
   if (!food) {
     return <p className="text-center py-10">No food details found!</p>;
   }
@@ -23,7 +24,8 @@ const FoodDetails = async ({ params }) => {
       <div className="grid md:grid-cols-2 gap-6">
         {/* Image */}
         <div className="relative w-full h-80 rounded-xl overflow-hidden border">
-          <img src={food.foodImg} alt={food.title} className="object-cover" />
+          {/* <img src={food.foodImg} alt={food.title} className="object-cover" /> */}
+          <Image src={food.foodImg} alt={food.title} width={500} height={320} className="object-cover" />
         </div>
 
         {/* Details */}
